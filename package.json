@@ -1,10 +1,10 @@
 {
-  "name": "semenova_next",
+  "name": "semenova-next",
   "version": "0.4.5",
   "private": true,
   "repository": {
     "type": "git",
-    "directory": "https://github.com/i0ji/p_katerina_semenova_next.git"
+    "directory": "https://github.com/i0ji/katerina-semenova-next.git"
   },
   "config": {
     "commitizen": {
