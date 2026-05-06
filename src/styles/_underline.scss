@@ -1,0 +1,35 @@
+a {
+  position: relative;
+  display: inline-block;
+
+  color: var(--color-accent);
+  font-weight: normal;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-accent);
+}
+
+a:after {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0;
+  left: 50%;
+
+  background-color: var(--color-accent);
+
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+
+  content: '';
+}
+
+a:hover:after,
+a:focus:after {
+  width: 100%;
+}

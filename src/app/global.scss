@@ -1,0 +1,66 @@
+@use '@/styles/index' as *;
+
+:root {
+  --color-main: transparent;
+  --color-accent: #212121;
+  --color-tooltip: white;
+}
+
+.theme-dark {
+  --color-main: #212121;
+  --color-accent: #aeaeae;
+  --color-tooltip: #212121;
+}
+
+.theme-light {
+  --color-main: transparent;
+  --color-accent: #212121;
+  --color-tooltip: #aeaeae;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  @include flex(null, space-between, null);
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 27px;
+  font-size: 22px;
+  max-width: 1840px;
+  margin: 0 auto;
+
+  background-color: var(--color-main);
+  color: var(--color-accent);
+}
+
+a,
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+@media (max-width: 1199px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1839px) {
+  body {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

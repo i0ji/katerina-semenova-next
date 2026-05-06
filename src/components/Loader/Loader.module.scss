@@ -1,0 +1,17 @@
+// @use '@/styles/themes.scss' as *;
+@use '@/styles/mixin.scss' as *;
+
+
+
+.loader {
+  @include flex(null, center, center);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #51515180;
+  opacity: 0.5;
+}

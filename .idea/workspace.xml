@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+<<<<<<< HEAD
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="2e62bbf4-ab37-4735-bd46-ddd52801c701" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Slides/Slides.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slides/Slides.module.scss" afterDir="false" />
+    </list>
+=======
+    <list default="true" id="36cc0480-189e-4942-a3ef-c731091042b8" name="Changes" comment="" />
+>>>>>>> feature/new_slider
+=======
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36cc0480-189e-4942-a3ef-c731091042b8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> develop
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+<<<<<<< HEAD
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "i0ji"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/i0ji/p_katerina_semenova_next",
+    "accountId": "9e984689-eff1-42dd-a69d-66b9ed8100a6"
+  }
+<<<<<<< HEAD
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2ucGvEeKnD8UbvWqGEiUJ2drLun" />
+=======
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+=======
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;i0ji&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/i0ji/p_katerina_semenova_next&quot;,
+    &quot;accountId&quot;: &quot;9e984689-eff1-42dd-a69d-66b9ed8100a6&quot;
+  }
+}</component>
+>>>>>>> develop
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2uX6Czu87OYIpbrsodQPtikgkeQ" />
+<<<<<<< HEAD
+>>>>>>> feature/new_slider
+=======
+>>>>>>> develop
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "deploy__out",
+<<<<<<< HEAD
+    "nodejs_package_manager_path": "pnpm"
+=======
+    "last_opened_file_path": "C:/Users/adm.ivan.udodenko/Documents/scripts/05.PROJECTS/p_katerina_semenova_next",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "preferences.toDoOptions",
+    "ts.external.directory.path": "C:\\Users\\adm.ivan.udodenko\\Documents\\scripts\\05.PROJECTS\\p_katerina_semenova_next\\node_modules\\typescript\\lib"
+>>>>>>> feature/new_slider
+  }
+}]]></component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adm.ivan.udodenko/Documents/scripts/05.PROJECTS/p_katerina_semenova_next&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\adm.ivan.udodenko\\Documents\\scripts\\05.PROJECTS\\p_katerina_semenova_next\\node_modules\\typescript\\lib&quot;
+  }
+}</component>
+>>>>>>> develop
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="2e62bbf4-ab37-4735-bd46-ddd52801c701" name="Changes" comment="" />
+      <created>1742540683845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1742540683845</updated>
+      <workItem from="1742540686346" duration="35000" />
+=======
+      <updated>1742382448925</updated>
+      <workItem from="1742382450249" duration="4467000" />
+      <workItem from="1742458616302" duration="593000" />
+      <workItem from="1742464943445" duration="6939000" />
+>>>>>>> feature/new_slider
+=======
+      <changelist id="36cc0480-189e-4942-a3ef-c731091042b8" name="Changes" comment="" />
+      <created>1742382448925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742382448925</updated>
+      <workItem from="1742382450249" duration="523000" />
+      <workItem from="1742535955872" duration="3000" />
+>>>>>>> develop
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+@mixin redbg {
+  background-color: red;
+}
+
+@mixin flex($direction, $horizontal, $vertical) {
+  display: flex;
+
+  @if $horizontal != null {
+    justify-content: $horizontal;
+  }
+
+  @if $vertical != null {
+    align-items: $vertical;
+  }
+
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+}

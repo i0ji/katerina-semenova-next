@@ -1,0 +1,52 @@
+.button__prev,
+.button__next {
+  position: absolute;
+  top: 0;
+
+  width: 25%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  border-radius: 5px;
+
+  opacity: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: 2s all ease;
+}
+
+.button__next:active .button__prev:active {
+  border-radius: 5px;
+}
+
+.button__prev {
+  left: 0;
+}
+
+.button__next {
+  right: 0;
+}
+
+.button__prev:hover {
+  opacity: 0.3;
+  background: linear-gradient(-90deg, transparent, black)
+    transparent;
+  border-radius: 5px;
+}
+
+.button__next:hover {
+  opacity: 0.3;
+  background: linear-gradient(90deg, transparent, black)
+    transparent;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .button__prev,
+  .button__next {
+    pointer-events: none;
+    display: none;
+  }
+}
