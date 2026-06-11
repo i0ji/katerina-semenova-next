@@ -1,5 +1,28 @@
+allowBuilds:
+  '@parcel/watcher': set this to true or false
+  sharp: set this to true or false
+  unrs-resolver: set this to true or false
+
 ignoredBuiltDependencies:
   - '@parcel/watcher'
 
+minimumReleaseAgeExclude:
+  - '@types/node@25.9.3'
+  - tmp@0.2.4
+  - lodash@4.17.24
+  - postcss@8.5.10
+  - fast-uri@3.1.1
+  - fast-uri@3.1.2
+  - tmp@0.2.6
+  - lodash@4.17.23
+
 onlyBuiltDependencies:
   - sharp
+
+overrides:
+  lodash@<=4.17.23: ^4.17.24
+  lodash@>=4.0.0 <=4.17.22: ^4.17.23
+  lodash@>=4.0.0 <=4.17.23: ^4.17.24
+  postcss@<8.5.10: ^8.5.10
+  tmp@<0.2.6: ^0.2.6
+  tmp@<=0.2.3: ^0.2.4
