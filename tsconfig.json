@@ -19,13 +19,12 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "public/*": ["public/"],
-      "components/*": ["src/components/*"],
-      "services/*": ["src/services/*"],
-      "store/*": ["src/store/*"],
+      "@/*": ["./src/*"],
+      "public/*": ["./src/public/"],
+      "components/*": ["./src/components/*"],
+      "services/*": ["./src/services/*"],
+      "store/*": ["./src/store/*"],
       "@styles/*": ["./src/styles/*"]
     },
     "typeRoots": ["./src/services"]

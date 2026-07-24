@@ -3,68 +3,141 @@
 module.exports = {
   types: [
     {
-      value: 'build',
-      name: 'build:     Сборка проекта или изменения внешних зависимостей',
+      value: 'feat',
+      name: 'feat:     A new feature (correlates with MINOR in SemVer)',
     },
     {
-      value: 'chore',
-      name: 'chore:     Обслуживание кода, обновление зависимостей',
-    },
-    {
-      value: 'ci',
-      name: 'ci:        Настройка CI и работа со скриптами',
+      value: 'fix',
+      name: 'fix:      A bug fix (correlates with PATCH in SemVer)',
     },
     {
       value: 'docs',
-      name: 'docs:      Обновление документации',
-    },
-    {
-      value: 'feat',
-      name: 'feat:      Добавление нового функционала',
-    },
-    { value: 'fix', name: 'fix:       Исправление ошибок' },
-    {
-      value: 'perf',
-      name: 'perf:      Изменения направленные на улучшение производительности',
-    },
-    {
-      value: 'refactor',
-      name: 'refactor:  Правки кода без исправления ошибок или добавления новых функций',
-    },
-    {
-      value: 'revert',
-      name: 'revert:    Откат на предыдущие коммиты',
+      name: 'docs:     Documentation only changes',
     },
     {
       value: 'style',
-      name: 'style:     Правки в стилях',
+      name: 'style:    Code style changes (formatting, semicolons, etc.)',
     },
-    { value: 'test', name: 'test:      Добавление тестов' },
+    {
+      value: 'refactor',
+      name: 'refactor: Code refactoring (neither fix nor feature)',
+    },
+    {
+      value: 'perf',
+      name: 'perf:     Performance improvements',
+    },
+    {
+      value: 'test',
+      name: 'test:     Adding or correcting tests',
+    },
+    {
+      value: 'build',
+      name: 'build:    Build system, dependencies, or tools',
+    },
+    {
+      value: 'ci',
+      name: 'ci:       CI/CD configuration or automation',
+    },
+    {
+      value: 'chore',
+      name: 'chore:    Maintenance tasks (no production code change)',
+    },
+    {
+      value: 'revert',
+      name: 'revert:   Revert a previous commit',
+    },
   ],
 
   scopes: [
     { name: 'components' },
-    { name: 'docs' },
-    { name: 'maintenance' },
-    { name: 'product' },
+    { name: 'environment' },
+    { name: 'full product' },
   ],
 
   messages: {
-    type: 'Какие изменения вы вносите?',
-    scope: '\nВыберите ОБЛАСТЬ, которую вы изменили (опционально):',
-    customScope: 'Укажите свою ОБЛАСТЬ:',
-    subject: 'Напишите КОРОТКОЕ описание в ПОВЕЛИТЕЛЬНОМ наклонении:\n',
-    body: 'Напишите ПОДРОБНОЕ описание (опционально). Используйте "|" для новой строки:\n',
-    breaking: 'Список BREAKING CHANGES (опционально):\n',
-    footer: 'Место для мета данных',
-    confirmCommit: 'Вас устраивает получившийся коммит?',
+    type: 'Changes type:',
+    scope: '\nChoose scope:',
+    customScope: 'Custom scope:',
+    subject: 'Short description:\n',
+    body: 'Full description. Use "|" for new row:\n',
+    breaking: 'Breaking changes:\n',
+    footer: 'Meta (version, issues):\n',
+    confirmCommit: 'Confirm',
   },
 
   allowCustomScopes: true,
-
   allowBreakingChanges: false,
+  footerPrefix: 'Version:',
+  subjectLimit: 72,
+};'use strict';
 
-  footerPrefix: 'МЕТА ДАННЫЕ:',
+module.exports = {
+  types: [
+    {
+      value: 'feat',
+      name: 'feat:     A new feature (correlates with MINOR in SemVer)',
+    },
+    {
+      value: 'fix',
+      name: 'fix:      A bug fix (correlates with PATCH in SemVer)',
+    },
+    {
+      value: 'docs',
+      name: 'docs:     Documentation only changes',
+    },
+    {
+      value: 'style',
+      name: 'style:    Code style changes (formatting, semicolons, etc.)',
+    },
+    {
+      value: 'refactor',
+      name: 'refactor: Code refactoring (neither fix nor feature)',
+    },
+    {
+      value: 'perf',
+      name: 'perf:     Performance improvements',
+    },
+    {
+      value: 'test',
+      name: 'test:     Adding or correcting tests',
+    },
+    {
+      value: 'build',
+      name: 'build:    Build system, dependencies, or tools',
+    },
+    {
+      value: 'ci',
+      name: 'ci:       CI/CD configuration or automation',
+    },
+    {
+      value: 'chore',
+      name: 'chore:    Maintenance tasks (no production code change)',
+    },
+    {
+      value: 'revert',
+      name: 'revert:   Revert a previous commit',
+    },
+  ],
 
+  scopes: [
+    { name: 'components' },
+    { name: 'environment' },
+    { name: 'full product' },
+  ],
+
+  messages: {
+    type: 'Changes type:',
+    scope: '\nChoose scope:',
+    customScope: 'Custom scope:',
+    subject: 'Short description:\n',
+    body: 'Full description. Use "|" for new row:\n',
+    breaking: 'Breaking changes:\n',
+    footer: 'Meta (version, issues):\n',
+    confirmCommit: 'Confirm',
+  },
+
+  allowCustomScopes: true,
+  allowBreakingChanges: false,
+  footerPrefix: 'Version:',
   subjectLimit: 72,
 };

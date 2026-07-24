@@ -1,22 +1,18 @@
 <h1>Reworked <a href="https://katerinasemenova.ru"> KaterinaSemenova</a> site using Next.JS, new libs, Turbopack</h1>
 
-<h3>Table of contents:</h3>
-1. Stack / libruary usage<br>
-2. Commit short history description/progress<br>
-3. Known issues / to go<br>
-<hr>
-
-<h3> 1. Stack / libruary usage</h3>
-<b>1.1 Next.JS, SASS, TS;<br>
+<details>
+<summary><b> 1. Stack / libruary usage</b></summary>
+1.1 Next.JS, SASS, TS;<br>
 1.2 Choose React-slick to implement slider: it has fade in/out, dots; <br>
 1.3 Next 15^, React 19^ (small compatibility issue), React-dom 19^ (small compatibility issue), TS, SASS, react-loading-skeleton, react-yandex-metrika<br>
 1.4 UUID for unqiue array IDs<br>
 1.5 Swiper (since 0.3.13)<br></b>
 1.6 Previous: multiple carousel/slider libs, react-accessible-accordion;
-
+</details>
 <hr>
 
-<h3> 2. Commit / process history</h3>
+<details>
+<summary><b> 2. Commit / process history </b></summary>
 <ul>
 <li><b>v: 0.0.1 / d: 29.10.24  </b>   
 project/repo init, git-flow init, first commit,</li>
@@ -116,7 +112,7 @@ Set up commitlint/husky; Open 2 issues; fix keen-slider implementation;
 </li>
 <li><b>v: 0.4.2 / d: 01.07.25</b> 
 Commitlint/husky/commitizen set up; 
-Forward for issue[#2](https://github.com/i0ji/p_katerina_semenova_next/issues/2); 
+Forward for issue[#2](https://github.com/i0ji/katerina-semenova-next/issues/2); 
 Testing <Skeleton/> and loading;
 Add concrete aspect ratio to correct implementation of <Image> and <Skeleton> size;
 </li>
@@ -154,25 +150,33 @@ deps update;
 <li><b>v: 0.4.5 / d: 27.11.25</b> 
 deps update;
 </li>
-<li><b>v: 0.4.5 / d: 12.12.25</b> 
-critical deps update: next, sass; remove webpack settings in favor of turobpack setup;
-</li>
-<li><b>v: 0.4.5 / d: 19.12.25</b> 
+<li><b>v: 0.4.5 / d: 23.01.26</b> 
 deps update;
 </li>
+<li><b>v: 0.4.5 / d: 10.02.26</b> 
+deps update; webpack vulnerabilities audit;
+</li>
+</li>
+<li><b>v: 0.4.5 / d: 24.07.26</b> 
+deps update; vulnerabilities check; pnpm update;
+</li>
 </ul>
+</details>
 <hr>
-<h3> 3. Known issues/to go</h3>
+
+<details> 
+<summary><b>3. Known issues/to go</b></summary>
 [X] <del>Still have trouble with build/dev paths and aliases; Still have to change it manually when deploy to Pages or to prod;</del><br>
 <b>UPD: multiple path attempts and setting changings</b><br>
 <del>[X] New one: missing react-slick lib fonts, which i do not use at all. Get rid of console warning by removing Slick font-face settings from final output build. Still have to find the solution;</del><br>
-<b>UPD: moved slick styles to component folder and get rid of unused classes</b><br>
+<b>UPD: moved slick styles to component folder and get rid of unused classes</b><br>pnpm 0
 <del>[X] Yandex.Analytics - UPD: have an integration issue; For now do not know where to put in in the dev version; I just put the script into the final bundle;</del><br>
 <b>UPD: use lib to add Metrika;</b><br>
 <del>[X] Implement DB with phpAdminPane;</del><br>
 <b>UPD: Set two tables in php that contains my Slides data;</b><br>
 <del>[X] Skeleton loading;</del><br>
 [&nbsp;&nbsp;] Non typed YM script;<br>
+</details>
 
 <hr>
 Version naming:<br>
