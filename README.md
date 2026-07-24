@@ -150,18 +150,16 @@ deps update;
 <li><b>v: 0.4.5 / d: 27.11.25</b> 
 deps update;
 </li>
-<<<<<<< HEAD
-<li><b>v: 0.4.5 / d: 09.01.26</b> 
-deps update;
-</li>
-=======
 <li><b>v: 0.4.5 / d: 23.01.26</b> 
 deps update;
 </li>
 <li><b>v: 0.4.5 / d: 10.02.26</b> 
 deps update; webpack vulnerabilities audit;
 </li>
->>>>>>> 0960c730465dfcf6efffa84fca1b57789dfb4262
+</li>
+<li><b>v: 0.4.5 / d: 24.07.26</b> 
+deps update; vulnerabilities check; pnpm update;
+</li>
 </ul>
 </details>
 <hr>
