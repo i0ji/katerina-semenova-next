@@ -160,8 +160,14 @@ deps update; webpack vulnerabilities audit;
 <li><b>v: 0.4.5 / d: 24.07.26</b> 
 deps update; vulnerabilities check; pnpm update;
 </li>
+<li><b>v: 0.4.5 / d: 06.09.26</b> 
+deps update; pnpm update; vulnerabilities check;
+</li>
 </ul>
 </details>
+
+
+
 <hr>
 
 <details> 
