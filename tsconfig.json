@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "noImplicitAny": false,
     "plugins": [
@@ -19,15 +23,26 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "public/*": ["public/"],
-      "components/*": ["src/components/*"],
-      "services/*": ["src/services/*"],
-      "store/*": ["src/store/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "public/*": [
+        "./public/"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "services/*": [
+        "./src/services/*"
+      ],
+      "store/*": [
+        "./src/store/*"
+      ]
     },
-    "typeRoots": ["./src/services"]
+    "typeRoots": [
+      "./src/services"
+    ]
   },
   "include": [
     "**/*.ts",
@@ -36,7 +51,11 @@
     "next-env.d.ts",
     "services/**/*.d.ts",
     "build/types/**/*.ts",
-    "commitlint.config.cjs"
-, "src/components/Slides/Slides.tsx_copy"  ],
-  "exclude": ["node_modules"]
+    "commitlint.config.cjs",
+    "src/components/Slides/Slides.tsx_copy",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

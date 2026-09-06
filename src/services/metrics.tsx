@@ -21,7 +21,7 @@ export default function Metrics() {
       webvisor: true,
       clickmap: true,
       trackLinks: true,
-      accurateTrackBounce: true
+      accurateTrackBounce: true,
     });
 
     window[`ym`](

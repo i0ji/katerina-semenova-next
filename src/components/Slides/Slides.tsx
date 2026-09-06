@@ -4,7 +4,11 @@ import styles from './Slides.module.scss';
 
 import { useState, useEffect } from 'react';
 
-import { NextButton, PrevButton, SlideImage } from 'components/index';
+import {
+  NextButton,
+  PrevButton,
+  SlideImage,
+} from 'components/index';
 import Skeleton from 'react-loading-skeleton';
 import Tooltip from '../Tooltip/Tooltip';
 
@@ -13,32 +17,66 @@ import { nanoid } from 'nanoid';
 import 'react-loading-skeleton/dist/skeleton.css';
 import 'keen-slider/keen-slider.min.css';
 
-
-export default function Slides(props) {
+export default function Slides(props: SlidesDataModel) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
   const [hover, setHover] = useState<number | null>(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     slideChanged(s) {
       setCurrentSlide(s.track.details.rel);
     },
-    created() {
-      setIsMounted(true);
-    },
   });
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    let cancelled = false;
 
-  if (!isMounted) return <Skeleton height={400} />;
+    async function preloadImages() {
+      await Promise.all(
+        props.slides.map(
+          slide =>
+            new Promise<void>(resolve => {
+              const img = new window.Image();
+
+              img.src = slide.img;
+
+              img.onload = () => resolve();
+              img.onerror = () => resolve();
+            })
+        )
+      );
+
+      if (!cancelled) {
+        setImagesLoaded(true);
+      }
+    }
+
+    preloadImages();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [props.slides]);
 
   return (
     <section className={styles.slides}>
       <div className={styles.slide__wrapper}>
-        <div ref={sliderRef} className={`keen-slider`}>
-          {props.slides.map((slide: SlideModel) => (
+        {!imagesLoaded && (
+          <div className={styles.skeleton}>
+            <Skeleton height={400} />
+          </div>
+        )}
+
+        <div
+          ref={sliderRef}
+          className="keen-slider"
+          style={{
+            opacity: imagesLoaded ? 1 : 0,
+            transition: 'opacity .2s',
+          }}
+        >
+          {props.slides.map(slide => (
             <div
               key={slide.id}
               className={`keen-slider__slide ${styles.slide}`}
@@ -53,35 +91,11 @@ export default function Slides(props) {
             </div>
           ))}
         </div>
-        {isMounted && (
+
+        {imagesLoaded && (
           <>
-            <div className={styles.controls}>
-              <PrevButton onClick={() => slider?.current?.prev()} />
-              <NextButton onClick={() => slider?.current?.next()} />
-            </div>
-
-            <div className={styles.dots}>
-              {props.slides.map((_, idx: number) => (
-                <div
-                  key={nanoid()}
-                  className={styles.dots_wrapper}
-                  onMouseEnter={() => setHover(idx)}
-                  onMouseLeave={() => setHover(null)}
-                >
-                  <button
-                    onClick={() => slider?.current?.moveToIdx(idx)}
-                    className={`${styles.dot} ${
-                      currentSlide === idx ? styles.active : ''
-                    }`}
-                    popoverTarget={'info'}
-                  />
-
-                  {hover === idx && (
-                    <Tooltip description={`К слайду ${idx + 1}`} />
-                  )}
-                </div>
-              ))}
-            </div>
+            {/* controls */}
+            {/* dots */}
           </>
         )}
       </div>

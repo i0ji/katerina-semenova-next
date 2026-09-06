@@ -5,20 +5,44 @@ import {
   fetchProjectsFailure,
 } from './projectSlice';
 
-export const fetchProjects = () => async (dispatch: AppDispatch) => {
-  try {
-    dispatch(fetchProjectsStart());
+// import { mockData } from '../../temp/mockData';
 
-    const res = await fetch('https://katerinasemenova.ru/fetchData.php');
+export const fetchProjects =
+  () => async (dispatch: AppDispatch) => {
+    try {
+      dispatch(fetchProjectsStart());
 
-    if (!res.ok) throw new Error(`Ошибка: ${res.status}`);
-    const data: SlidesDataModel[] = await res.json();
-    dispatch(fetchProjectsSuccess(data));
-  } catch (error: unknown) {
-    let message = 'Неизвестная ошибка';
-    if (error instanceof Error) {
-      message = error.message;
+
+      //OPTION MOCK DATA
+      // if (process.env.NEXT_PUBLIC_USE_MOCK === 'true') {
+      //   await new Promise((res) => setTimeout(res, 500));
+
+      //   const normalizedData = mockData.map((project) => ({
+      //     ...project,
+      //     slides: project.slides.map((slide) => ({
+      //       ...slide,
+      //       img: slide.img.startsWith('/')
+      //         ? slide.img
+      //         : `/${slide.img}`,
+      //     })),
+      //   }));
+
+      //   dispatch(fetchProjectsSuccess(normalizedData));
+      //   return;
+      // }
+
+      const res = await fetch(
+        'https://katerinasemenova.ru/fetchData.php'
+      );
+
+      if (!res.ok) throw new Error(`Ошибка: ${res.status}`);
+      const data: SlidesDataModel[] = await res.json();
+      dispatch(fetchProjectsSuccess(data));
+    } catch (error: unknown) {
+      let message = 'Неизвестная ошибка';
+      if (error instanceof Error) {
+        message = error.message;
+      }
+      dispatch(fetchProjectsFailure(message));
     }
-    dispatch(fetchProjectsFailure(message));
-  }
-};
+  };

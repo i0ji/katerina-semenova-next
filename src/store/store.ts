@@ -5,7 +5,7 @@ import themeReducer from './themeSlice';
 const store = configureStore({
   reducer: {
     projects: projectsReducer,
-    theme: themeReducer
+    theme: themeReducer,
   },
 });
 
