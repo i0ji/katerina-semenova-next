@@ -163,10 +163,11 @@ deps update; vulnerabilities check; pnpm update;
 <li><b>v: 0.4.5 / d: 06.09.26</b> 
 deps update; pnpm update; vulnerabilities check;
 </li>
+<li><b>v: 0.4.5 / d: 25.09.26</b> 
+pnpm update; vulnerabilities check;
+</li>
 </ul>
 </details>
-
-
 
 <hr>
 
