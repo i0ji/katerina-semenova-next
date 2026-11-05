@@ -1,7 +1,4 @@
-// @use '@/styles/themes.scss' as *;
 @use '@/styles/mixin.scss' as *;
-
-
 
 .loader {
   @include flex(null, center, center);

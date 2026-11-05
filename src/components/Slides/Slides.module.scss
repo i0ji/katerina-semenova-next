@@ -1,15 +1,25 @@
 @use '@/styles/mixin' as *;
 
 .slides {
+  width: 100%;
+  min-width: 0;
   margin-bottom: 30px;
 
-  .keen-slider__slide {
+  :global(.keen-slider) {
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  :global(.keen-slider__slide) {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    min-width: 100% !important;
-    max-width: 100% !important;
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
 
     overflow: hidden;
     position: relative;
@@ -17,6 +27,12 @@
 
   .slide {
     position: relative;
+    opacity: 0;
+    transition: opacity 460ms ease;
+
+    &.active {
+      opacity: 1;
+    }
 
     &__image {
       display: block;
@@ -33,6 +49,11 @@
 
   .slide__wrapper {
     position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: clamp(220px, 47.37vw, 900px);
+    aspect-ratio: 19 / 9;
+    overflow: hidden;
 
     .dots {
       position: absolute;
@@ -107,4 +128,103 @@
   position: absolute;
   inset: 0;
   z-index: 10;
+  overflow: hidden;
+  border-radius: 5px;
+  background: color-mix(
+    in srgb,
+    var(--color-accent) 5%,
+    transparent
+  );
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      color-mix(in srgb, var(--color-accent) 8%, transparent) 50%,
+      transparent 80%
+    );
+    animation: portfolio-shimmer 1.8s ease-in-out infinite;
+  }
+}
+
+.imageError {
+  position: absolute;
+  inset: 0;
+  z-index: 11;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--color-accent);
+  background: var(--color-main);
+  font-size: 16px;
+  text-align: center;
+}
+
+.controls {
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  pointer-events: none;
+}
+.controls :global(button) {
+  pointer-events: auto;
+}
+
+.pagination {
+  position: absolute;
+  z-index: 13;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0;
+  max-width: calc(100% - 28px);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 8px;
+  border-radius: 20px;
+  background: #00000035;
+
+  button {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  button::after {
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: #ffffff80;
+    content: '';
+    transition:
+      background-color 220ms ease,
+      transform 220ms ease;
+  }
+  button[aria-current='true']::after {
+    background: #fff;
+    transform: scale(1.25);
+  }
+}
+
+@keyframes portfolio-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton span {
+    animation: none;
+  }
+  .slide {
+    transition: none;
+  }
 }

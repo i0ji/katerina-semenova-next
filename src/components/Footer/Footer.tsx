@@ -6,26 +6,36 @@ import scrollToSide from 'services/scroll';
 
 export default function Footer() {
   const [showButton, setShowButton] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const contactsRef = useRef(null);
+  const bottomRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-    const handleScroll = () => {
-      const scrollThreshold = 5;
-      const isBottomReached =
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - scrollThreshold;
-      setShowButton(isBottomReached);
+    const node = bottomRef.current;
+    const checkPageBottom = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      setShowButton(atBottom);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (!node || !('IntersectionObserver' in window)) {
+      window.addEventListener('scroll', checkPageBottom, { passive: true });
+      window.addEventListener('resize', checkPageBottom);
+      checkPageBottom();
+      return () => {
+        window.removeEventListener('scroll', checkPageBottom);
+        window.removeEventListener('resize', checkPageBottom);
+      };
+    }
 
-  if (!isMounted) {
-    return null;
-  }
+    const observer = new IntersectionObserver(([entry]) => {
+      setShowButton(entry.isIntersecting);
+    }, { threshold: 0, rootMargin: '0px 0px 2px 0px' });
+    observer.observe(node);
+    window.addEventListener('resize', checkPageBottom, { passive: true });
+    checkPageBottom();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', checkPageBottom);
+    };
+  }, []);
 
   return (
     <footer className={styles.footer}>
@@ -57,7 +67,7 @@ export default function Footer() {
       </div>
 
       <hr />
-      <div className={styles.footer__contacts} ref={contactsRef}>
+      <div className={styles.footer__contacts}>
         <h4>Контакты</h4>
         <div>
           <p>
@@ -78,12 +88,15 @@ export default function Footer() {
 
         <button
           id="bottomScroll"
+          type="button"
+          aria-label="Наверх"
           onClick={() => scrollToSide('top')}
           className={`${styles.scroll_button} ${showButton ? styles.show : ''}`}
         >
           ↑
         </button>
       </div>
+      <span ref={bottomRef} className={styles.bottomSentinel} aria-hidden="true" />
     </footer>
   );
 }

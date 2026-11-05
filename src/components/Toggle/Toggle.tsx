@@ -6,8 +6,14 @@ export default function Toggle(props) {
 
   return (
     <div className={styles.toggle}>
-      <input type="checkbox" id="temp" onClick={props.handleToggle} />
-      <label htmlFor="temp">
+      <input
+        type="checkbox"
+        id="theme-toggle"
+        checked={themeMode === 'dark'}
+        onChange={props.handleToggle}
+        aria-label="Переключить цветовую тему"
+      />
+      <label htmlFor="theme-toggle">
         {themeMode === 'dark' ? `светлая` : `тёмная`} тема
       </label>
     </div>

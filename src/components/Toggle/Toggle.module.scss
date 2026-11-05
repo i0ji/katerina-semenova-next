@@ -9,7 +9,17 @@
   line-height: 15px;
 
   input[type='checkbox'] {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  input[type='checkbox']:focus-visible + label::before {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
   }
 
   label {

@@ -24,6 +24,7 @@
 *.pem
 /temp
 /temp/*
+/public/assets
 /test
 *.php
 

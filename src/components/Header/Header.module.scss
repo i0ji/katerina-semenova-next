@@ -11,6 +11,34 @@
   font-weight: 500;
 }
 
+.name {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  color: var(--color-accent);
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    content: '';
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    width: 100%;
+  }
+}
+
 @media (max-width: 700px) {
   .header {
     margin: 0 0 30px 0;

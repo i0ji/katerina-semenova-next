@@ -166,6 +166,12 @@ deps update; pnpm update; vulnerabilities check;
 <li><b>v: 0.4.5 / d: 25.09.26</b> 
 pnpm update; vulnerabilities check;
 </li>
+</li>
+<li><b>v: 0.5.0 / d: 05.11.26</b> 
+pnpm update; vulnerabilities check;
+full refactor with static data;
+smooth dark theme animation;
+</li>
 </ul>
 </details>
 

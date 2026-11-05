@@ -1,0 +1,79 @@
+[
+  {
+    "description": "Бассейн «Чайка» — оформление к 65-летию бассейна — 2022",
+    "slides": [
+      { "id": 1001, "img": "/assets/AnniversarySlides/1.webp" },
+      { "id": 1002, "img": "/assets/AnniversarySlides/2.webp" },
+      { "id": 1003, "img": "/assets/AnniversarySlides/3.webp" },
+      { "id": 1004, "img": "/assets/AnniversarySlides/4.webp" }
+    ]
+  },
+  {
+    "description": "БЦ «Нагатинский» — айдентика — 2022",
+    "slides": [
+      { "id": 2001, "img": "/assets/NagaStyleSlides/1.webp" },
+      { "id": 2002, "img": "/assets/NagaStyleSlides/2.webp" },
+      { "id": 2003, "img": "/assets/NagaStyleSlides/3.webp" },
+      { "id": 2004, "img": "/assets/NagaStyleSlides/4.webp" },
+      { "id": 2005, "img": "/assets/NagaStyleSlides/5.webp" },
+      { "id": 2006, "img": "/assets/NagaStyleSlides/6.webp" },
+      { "id": 2007, "img": "/assets/NagaStyleSlides/7.webp" },
+      { "id": 2008, "img": "/assets/NagaStyleSlides/8.webp" }
+    ]
+  },
+  {
+    "description": "ТРЦ Нора — оформление игры «Квиз» — 2022",
+    "slides": [
+      { "id": 3001, "img": "/assets/NoraQuizSlides/1.webp" },
+      { "id": 3002, "img": "/assets/NoraQuizSlides/2.webp" },
+      { "id": 3003, "img": "/assets/NoraQuizSlides/3.webp" },
+      { "id": 3004, "img": "/assets/NoraQuizSlides/4.webp" },
+      { "id": 3005, "img": "/assets/NoraQuizSlides/5.webp" },
+      { "id": 3006, "img": "/assets/NoraQuizSlides/6.webp" }
+    ]
+  },
+  {
+    "description": "ТРЦ Нора — айдентика — 2021",
+    "slides": [
+      { "id": 4001, "img": "/assets/NoraStyleSlides/1.webp" },
+      { "id": 4002, "img": "/assets/NoraStyleSlides/2.webp" },
+      { "id": 4003, "img": "/assets/NoraStyleSlides/3.webp" }
+    ]
+  },
+  {
+    "description": "КТК — Корпоративный фирменный стиль — 2023",
+    "slides": [
+      { "id": 5001, "img": "/assets/PatternSlides/1.webp" },
+      { "id": 5002, "img": "/assets/PatternSlides/2.webp" },
+      { "id": 5003, "img": "/assets/PatternSlides/3.webp" },
+      { "id": 5004, "img": "/assets/PatternSlides/4.webp" },
+      { "id": 5005, "img": "/assets/PatternSlides/5.webp" },
+      { "id": 5006, "img": "/assets/PatternSlides/6.webp" },
+      { "id": 5007, "img": "/assets/PatternSlides/7.webp" },
+      { "id": 5008, "img": "/assets/PatternSlides/8.webp" }
+    ]
+  },
+  {
+    "description": "Бассейн «Чайка» — айдентика — 2022",
+    "slides": [
+      { "id": 6001, "img": "/assets/SeagullSlides/1.webp" },
+      { "id": 6002, "img": "/assets/SeagullSlides/2.webp" },
+      { "id": 6003, "img": "/assets/SeagullSlides/3.webp" },
+      { "id": 6004, "img": "/assets/SeagullSlides/4.webp" },
+      { "id": 6005, "img": "/assets/SeagullSlides/5.webp" },
+      { "id": 6006, "img": "/assets/SeagullSlides/6.webp" },
+      { "id": 6007, "img": "/assets/SeagullSlides/7.webp" },
+      { "id": 6008, "img": "/assets/SeagullSlides/8.webp" }
+    ]
+  },
+  {
+    "description": "ТЦ ЦУМ — Реклама фуд-корта — 2023",
+    "slides": [
+      { "id": 7001, "img": "/assets/TsumSlides/1.webp" },
+      { "id": 7002, "img": "/assets/TsumSlides/2.webp" },
+      { "id": 7003, "img": "/assets/TsumSlides/3.webp" },
+      { "id": 7004, "img": "/assets/TsumSlides/4.webp" },
+      { "id": 7005, "img": "/assets/TsumSlides/5.webp" }
+    ]
+  }
+]

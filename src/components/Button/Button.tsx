@@ -9,8 +9,7 @@ export function PrevButton({ onClick }: ButtonProps) {
     <button
       onClick={onClick}
       className={styles.button__prev}
-      aria-label="Previous slide"
-      tabIndex={-1}
+      aria-label="Предыдущий слайд"
     />
   );
 }
@@ -20,8 +19,7 @@ export function NextButton({ onClick }: ButtonProps) {
     <button
       onClick={onClick}
       className={styles.button__next}
-      aria-label="Next slide"
-      tabIndex={-1}
+      aria-label="Следующий слайд"
     />
   );
 }

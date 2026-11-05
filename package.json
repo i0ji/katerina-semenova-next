@@ -1,6 +1,6 @@
 {
   "name": "semenova-next",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -16,9 +16,9 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node scripts/prepare-assets.mjs && next dev --turbopack",
+    "build": "node scripts/prepare-assets.mjs && next build",
+    "preview": "node scripts/preview.mjs",
     "lint": "next lint",
     "prepare": "husky"
   },
@@ -45,9 +45,6 @@
     "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "keen-slider": "^6.8.6",
-    "nanoid": "^6.0.1",
-    "react-intersection-observer": "^11.0.1",
-    "react-loading-skeleton": "^3.5.0",
     "react-redux": "^9.3.0",
     "react-yandex-metrika": "^2.6.0",
     "sass": "^1.105.0",
